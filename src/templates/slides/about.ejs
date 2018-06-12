@@ -1,0 +1,21 @@
+<% console.log(data) %>
+<div class="about__title">
+    <%=data.slideHeading%>
+</div>
+<div class="about__scores">
+    <div class="scores-list">
+        <% data.highlightes.forEach(item => { %>
+            <div class="scores-list__item">
+                <div class="scores-list__icon">
+                    <img src="<%-item.src%>">
+                </div>
+                <div class="scores-list__score">
+                    <img src="<%-item.score%>">
+                </div>
+                <div class="scores-list__score-title">
+                    <%-item.title%>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>

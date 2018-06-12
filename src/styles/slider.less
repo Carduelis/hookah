@@ -1,0 +1,41 @@
+.slider {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.slider-list {
+    background: #333;
+    transition: transform 300ms;
+    will-change: transform;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.77, 0.01, 0.24, 1);
+}
+
+.slide {
+    height: 100vh;
+    display: flex;
+    transition: transform 300ms;
+    will-change: transform;
+    background-image: radial-gradient(
+            ellipse at top,
+            rgba(227, 242, 253, 0.2),
+            transparent
+        ),
+        linear-gradient(25deg, #19150e, #3e2f2a);
+    align-items: center;
+    color: #fff;
+    position: relative;
+    justify-content: center;
+}
+
+.subslide {
+    display: flex;
+    width: 100%;
+    padding-left: 20rem;
+    .bowls {
+        flex-grow: 1;
+    }
+    .tobacco {
+        flex-grow: 2;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		<%-htmlWebpackPlugin.options.title%>
+	</title>
+	<script>
+		var modernBrowser = 'assign' in Object;
+		if (!modernBrowser) {
+			var scriptElement = document.createElement('script');
+
+			scriptElement.async = false;
+			scriptElement.src = 'polyfills.bundle.js';
+			document.head.appendChild(scriptElement);
+		}
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+</head>
+
+<body>
+	<div id="root">
+		<div class="preloader-page">
+			<div class="preloader">
+				<div class="preloader-spin"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

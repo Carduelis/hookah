@@ -1,0 +1,38 @@
+<div class="subslide subslide--tobacco">
+	<div class="bowls">
+		<h2 class="bowls-title">Чаши</h2>
+		<div class="bowls-list">
+		<% data.bowls.forEach(item => { %>
+			<div class="bowl-item">
+				<span class="bowl-item__title"><%-item.title%></span>
+				<span class="bowl-item__description"><%-item.price%><span class="ruble"></span></span>
+			</div>
+		<% }) %>
+		</div>
+	</div>
+	<div class="tobacco">
+		<h2 class="tobacco-title">Табак <span class="subtitle">(на глиняной чаше)</span></h2>
+		<div class="tobacco-list">
+		<% data.tobacco.forEach(item => { %>
+			<div class="tobacco-item">
+				<div class="tobacco-item__icon">
+					<img src="<%-item.src%>" alt="<%-item.title%>">
+				</div>
+				<span class="tobacco-item__price"><%-item.price%><span class="ruble"></span></span>
+			</div>
+		<% }) %>
+		</div>
+		<div class="bowl-replacement">
+			<% data.bowl_replacement.forEach(item => { %>
+				<div class="bowl-replacement__item">
+					<span class="bowl-replacement__title">
+						<%-item.title%>
+					</span>
+					<span class="bowl-replacement__price">
+						<%-item.price%> <span class="ruble"></span>
+					</span>
+				</div>
+			<% }) %>
+		</div>
+	</div>
+</div>

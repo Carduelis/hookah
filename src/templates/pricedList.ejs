@@ -1,0 +1,11 @@
+<div class="priced-list__wrapper priced-list__wrapper--<%-data.className%>">
+    <h2 class="priced-list__title"><%-data.title%></h2>
+    <div class="priced-list">
+    <% data.items.forEach(item => { %>
+        <div class="item">
+            <span class="item__title"><%-item.title%></span>
+            <span class="item__description"><%-item.price%><span class="ruble"></span></span>
+        </div>
+    <% }) %>
+    </div>
+</div>

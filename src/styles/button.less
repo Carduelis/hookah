@@ -1,0 +1,25 @@
+.button {
+    border: 1px solid;
+    padding: 0.8em 2em;
+    cursor: pointer;
+    border-radius: 0.4em;
+    display: flex;
+    align-items: center;
+    &:hover {
+        box-shadow: 0 0 10px -3px;
+    }
+    &:active {
+        transform: translateY(1px);
+        &:focus {
+            box-shadow: 0 0 10px -3px;
+        }
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px;
+    }
+    &--pending {
+        animation: ButtonLevitating 1s linear infinite;
+        animation-direction: alternate;
+    }
+}

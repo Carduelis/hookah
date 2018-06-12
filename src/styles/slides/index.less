@@ -1,0 +1,33 @@
+[data-id="index"] {
+    background-image: url("../../../assets/slides/index/background.jpg");
+    .wrapper {
+        .title {
+            font-size: 10em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            text-transform: uppercase;
+            @letterSpacing: 0.01em;
+            &__type {
+                font-weight: 100;
+                @fix: 0.01em;
+                letter-spacing: @letterSpacing + @fix;
+            }
+            &__name {
+                font-weight: 700;
+                letter-spacing: @letterSpacing;
+            }
+        }
+    }
+    .main-features {
+        padding-left: @space;
+        bottom: @space;
+        display: flex;
+        position: absolute;
+    }
+    .feature {
+        flex-basis: 15em;
+        font-size: 1.2em;
+        margin-right: @space;
+    }
+}

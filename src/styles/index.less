@@ -1,0 +1,53 @@
+@import "vars.less";
+@whityOne: #fafafa;
+@blackyOne: #0a1d2a;
+@headerHeight: 4em;
+
+html {
+    font-size: 16px;
+    @media (max-width: 1600px) {
+        font-size: 12px;
+    }
+    @media (max-width: 1400px) {
+        font-size: 10px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fafafa;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.preloader-page {
+    display: none;
+}
+
+@keyframes ButtonLevitating {
+    0% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
+}
+@import "loader.less";
+@import "slider.less";
+@import "button.less";
+@import "stats.less";
+@import "logs.less";
+@import "placeholder.less";
+@import "menu-topbar.less";
+@import "menu-leftbar.less";
+
+@import "./slides/index.less";
+@import "./slides/about.less";
