@@ -1,7 +1,9 @@
 <div class="subslide subslide--tobacco">
-	
-	<%=data.pricedListBowl%>
-	<div class="tobacco">
+	<div class="group group--bowls">
+		<h3 class="priced-list__title">Чаши</h3>
+		<%=data.pricedListBowl%>
+	</div>
+	<div class="group group--tobacco">
 		<h3 class="tobacco-title">Табак <span class="subtitle">(на глиняной чаше)</span></h3>
 		<div class="tobacco-list">
 		<% data.tobacco.forEach(item => { %>

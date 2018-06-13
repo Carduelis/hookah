@@ -1,7 +1,6 @@
 <div class="priced-list__wrapper priced-list__wrapper--<%-data.className%>">
-    <h3 class="priced-list__title"><%-data.title%></h3>
     <div class="priced-list">
-    <% data.items.forEach(item => { %>
+    <% data.forEach(item => { %>
         <div class="item">
             <span class="item__title"><%-item.title%></span>
             <span class="item__description"><%-item.price%><span class="ruble">₽</span></span>

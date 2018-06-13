@@ -1,4 +1,27 @@
+// about
+import highlightes from './highlightes';
+// menuHookah
+import tobacco from './tobacco';
+import bowls from './bowls';
+import bowl_replacement from './bowl_replacement';
+// menuTea
+import tea from './tea';
+// menuBar
+import bar from './bar';
+// menuPromo
+import promo from './promo';
+
+import entertainment from './entertainment';
+
 export default {
+    highlightes,
+    tobacco,
+    bowls,
+    bowl_replacement,
+    tea,
+    bar,
+    promo,
+    entertainment,
     slides: [
         {
             id: 'index',
@@ -23,24 +46,28 @@ export default {
             id: 'menuHookah',
             title: 'Кальяны',
             menuTitle: 'Меню',
+            leftBar: true,
             order: 30
         },
         {
             id: 'menuTea',
             title: 'Чай',
             menuTitle: null,
+            leftBar: true,
             order: 31
         },
         {
             id: 'menuBar',
             title: 'Бар',
             menuTitle: null,
+            leftBar: true,
             order: 32
         },
         {
             id: 'menuPromo',
             title: 'Акции',
             menuTitle: null,
+            leftBar: true,
             order: 33
         },
         {
@@ -53,6 +80,9 @@ export default {
             id: 'entertainment',
             title: 'Развлечения',
             menuTitle: 'Развлечения',
+            description: `Каждый 6-й кальян. Мы знаем толк в кальянах и чае.<br>
+                Это наша страсть. И мы хотим поделиться<br>
+                этой любовью с Вами.`,
             order: 50
         },
         {
@@ -60,128 +90,6 @@ export default {
             title: 'Контакты',
             menuTitle: 'Контакты',
             order: 60
-        }
-    ],
-    highlightes: [
-        {
-            icon: 'fgdfg.png',
-            score: 99,
-            title: 'Вкусов табака'
-        },
-        {
-            icon: 'fgdfg.png',
-            score: 85,
-            title: 'Сортов чая'
-        },
-        {
-            icon: 'fgdfg.png',
-            score: 120,
-            title: 'Идей для кальяна'
-        },
-        {
-            icon: 'fgdfg.png',
-            score: 250,
-            title: 'книг'
-        }
-    ],
-    promo: [
-        {
-            title: '2 за 1500',
-            description: '2 кальяна за 1500'
-        },
-        {
-            title: 'Тариф "Дневной"',
-            description: 'с 14:00 до 17:00 калян за 500'
-        },
-        {
-            title: 'Дым без границ',
-            description: 'Безлимитный калян',
-            cost: [
-                {
-                    price: '2500',
-                    description: 'на глиняной чаше'
-                },
-                {
-                    price: '3500',
-                    description: 'на фруктовой чаше'
-                }
-            ]
-        }
-    ],
-    tobacco: [
-        {
-            title: 'Al Fakher',
-            src: 'asdasd.png',
-            price: 900
-        },
-        {
-            title: 'Adaya',
-            src: 'asdasd.png',
-            price: 1000
-        },
-        {
-            title: 'Starbuzz',
-            src: 'asdasd.png',
-            price: 1100
-        },
-        {
-            title: 'Darkside',
-            src: 'asdasd.png',
-            price: 1100
-        },
-        {
-            title: 'Tangiers',
-            src: 'asdasd.png',
-            price: 1100
-        },
-        {
-            title: 'World Original',
-            src: 'asdasd.png',
-            price: 1100
-        }
-    ],
-    bowls: [
-        {
-            title: 'Апельсин',
-            price: 500
-        },
-        {
-            title: 'Яблоко',
-            price: 500
-        },
-        {
-            title: 'Грейпфрут',
-            price: 500
-        },
-        {
-            title: 'Гранат',
-            price: 700
-        },
-        {
-            title: 'Ананас',
-            price: 700
-        },
-        {
-            title: 'Свити',
-            price: 600
-        },
-        {
-            title: 'Арбуз',
-            price: 800
-        },
-        {
-            title: 'Дыня',
-            price: 800
-        }
-    ],
-    bowl_replacement: [
-        {
-            title: 'Замена глиняной чаши',
-            price: 500
-        },
-        {
-            title: 'Замена фруктовой чаши',
-            price: 600
         }
     ]
 };

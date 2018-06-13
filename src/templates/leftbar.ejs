@@ -1,1 +1,9 @@
-<div class="menu-leftbar"></div>
+<nav class="menu-leftbar">
+    <div class="menu-leftbar__list">
+        <% data.items.forEach(item => { %>
+        <a href="#<%-item.id%>" class="menu-leftbar__item">
+            <%-item.title%>
+        </a>
+        <% }) %>
+    </div>
+</nav>

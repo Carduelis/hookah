@@ -1,9 +1,14 @@
 .priced-list {
-    &__wrapper {
-        padding: @pad;
-        min-width: @block;
+    &__row {
+        display: flex;
+        > div {
+            margin-right: @space*2;
+        }
     }
-    &__title {
+    &__wrapper {
+        min-width: @block;
+        flex-grow: 1;
+        flex-basis: @block;
     }
     .item {
         display: flex;

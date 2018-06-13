@@ -1,11 +1,88 @@
+[data-id^="menu"] {
+    .wrapper {
+        width: 100%;
+        margin-bottom: @space;
+    }
+}
 [data-id="menuHookah"] {
     background-image: url("../../../assets/slides/menuHookah/bg.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     .wrapper {
-        width: 100%;
-        margin-bottom: @space;
         background-color: rgba(0, 0, 0, 0.5);
+    }
+    .group--tobacco {
+        margin-left: @space;
+    }
+    .tobacco-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tobacco-item {
+        margin-right: @space;
+        margin-bottom: @space;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__icon {
+            @size: 10rem;
+            width: @size;
+            height: @size;
+            background-color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                max-width: 60%;
+                max-height: 60%;
+            }
+        }
+        &__price {
+            font-size: 2em;
+        }
+    }
+    .bowl-replacement {
+        margin-top: -@space / 2;
+        font-size: 1.4em;
+        font-weight: 200;
+        &__item {
+            margin: 0.2em 0;
+        }
+    }
+}
+
+[data-id="menuPromo"] {
+    .promo-list {
+        padding-left: @block;
+        display: flex;
+        flex-direction: column;
+    }
+    .promo-item {
+        &__title {
+            margin-bottom: 0;
+        }
+        &__description {
+            font-weight: 200;
+            font-size: 1.2em;
+        }
+    }
+    .cost-row {
+        margin-top: @pad;
+        display: flex;
+    }
+    .cost-item {
+        margin-right: @space;
+        &__title {
+            font-size: 5em;
+            .ruble {
+                font-size: 0.5em;
+            }
+        }
+        &__description {
+            margin-top: -0.6em;
+            font-size: 1.2em;
+        }
     }
 }

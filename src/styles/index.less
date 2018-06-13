@@ -17,6 +17,11 @@ html {
     }
     line-height: 1.5;
 }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Roboto Slab", serif;
@@ -29,7 +34,7 @@ body {
 h2 {
     // названия слайдов
     font-size: 6em;
-    margin: 0 0 0.4em;
+    margin: 1em 0 0.4em;
     font-weight: 200;
 }
 
@@ -40,7 +45,7 @@ h2 {
 h3 {
     // табак, чаши
     font-size: 4em;
-    margin: 0 0 0.4em;
+    margin: 2em 0 0.4em;
     font-weight: 200;
 }
 h4 {
@@ -50,6 +55,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.group {
+    padding: @pad;
+}
+
 .preloader-page {
     display: none;
 }

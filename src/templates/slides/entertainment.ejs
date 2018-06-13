@@ -1,1 +1,18 @@
-Досуг
+<div class="entertainment__title">
+    <%=data.slideHeading%>
+</div>
+<div class="entertainment__content">
+
+    <div class="entertainment__list">
+    <% data.entertainment.forEach(item => { %>
+        <div class="entertainment__item">
+            <div class="entertainment__icon">
+                <img src="<%-item.src%>" alt="<%-item.title%>">
+            </div>
+            <div class="entertainment__title">
+                <%-item.title%>
+            </div>
+        </div>
+    <% }) %>
+    </div>
+</div>

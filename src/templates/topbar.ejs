@@ -1,7 +1,7 @@
 <div class="menu-topbar">
     <div class="menu-topbar__logo"></div>
     <nav class="menu-topbar__nav">
-        <% data.slides.filter(slide => slide.menuTitle).forEach(slide => { %>
+        <% data.filter(slide => slide.menuTitle).forEach(slide => { %>
             <li>
                 <a 
                     href="#<%-slide.id%>" 

@@ -1,12 +1,24 @@
 import topbar from './topbar.ejs';
 import leftbar from './leftbar.ejs';
 import main from './main.ejs';
-import slides from './slides';
+import slidesTemplates from './slides';
 import preloader from './preloader.ejs';
 import data from '../data';
 import slideWrapper from './slideWrapper.ejs';
 import pricedList from './pricedList.ejs';
 import slideHeading from './slideHeading.ejs';
+
+const {
+    tea,
+    bar,
+    bowls,
+    promo,
+    highlightes,
+    entertainment,
+    bowl_replacement,
+    tobacco,
+    slides
+} = data;
 
 const customSlideData = slide => {
     console.log(slide.id);
@@ -15,6 +27,7 @@ const customSlideData = slide => {
             return {};
         case 'about':
             return {
+                highlightes,
                 slideHeading: slideHeading(slide)
             };
         case 'contacts':
@@ -25,38 +38,47 @@ const customSlideData = slide => {
             return {};
         case 'menuHookah':
             return {
-                pricedListBowl: pricedList({
-                    items: data.bowls,
-                    title: 'Чаши'
-                })
+                bowl_replacement,
+                tobacco,
+                pricedListBowl: pricedList(bowls)
             };
         case 'menuTea':
-            return {};
+            return {
+                pricedListTea1: pricedList(tea.slice(0, 6)),
+                pricedListTea2: pricedList(tea.slice(6, 12)),
+                pricedListTea3: pricedList(tea.slice(12, 18))
+            };
         case 'menuBar':
-            return {};
+            return {
+                pricedListBar1: pricedList(bar.slice(0, 6)),
+                pricedListBar2: pricedList(bar.slice(6, 12)),
+                pricedListBar3: pricedList(bar.slice(12, 18))
+            };
         case 'menuPromo':
-            return {};
+            return { promo };
         case 'entertainment':
-            return {};
+            return {
+                entertainment,
+                slideHeading: slideHeading(slide)
+            };
         default:
             return {};
     }
 };
 
 export default main({
-    topbar: topbar(data),
-    leftbar: leftbar(data),
-    slides: data.slides
+    topbar: topbar(slides),
+    leftbar: leftbar({
+        items: slides.filter(item => item.leftBar)
+    }),
+    slides: slides
         .map(slide => {
             console.log(slide.id, slide);
             return slideWrapper({
                 ...slide,
-                slide: slides[slide.id]({
-                    ...data,
-                    ...customSlideData(slide)
-                })
+                slide: slidesTemplates[slide.id](customSlideData(slide))
             });
         })
         .join(''),
-    preloader: preloader(data)
+    preloader: preloader()
 });
