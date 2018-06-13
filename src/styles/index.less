@@ -1,4 +1,5 @@
-@import "vars.less";
+@import "./vars.less";
+@import "./normalize.less";
 @whityOne: #fafafa;
 @blackyOne: #0a1d2a;
 @headerHeight: 4em;
@@ -14,6 +15,7 @@ html {
     @media (max-width: 640px) {
         font-size: 14px;
     }
+    line-height: 1.5;
 }
 
 body {
@@ -22,6 +24,26 @@ body {
     padding: 0;
     margin: 0;
     color: #fafafa;
+}
+
+h2 {
+    // названия слайдов
+    font-size: 6em;
+    margin: 0 0 0.4em;
+    font-weight: 200;
+}
+
+.subtitle {
+    font-size: 0.4em;
+}
+
+h3 {
+    // табак, чаши
+    font-size: 4em;
+    margin: 0 0 0.4em;
+    font-weight: 200;
+}
+h4 {
 }
 
 a {
@@ -48,6 +70,8 @@ a {
 @import "placeholder.less";
 @import "menu-topbar.less";
 @import "menu-leftbar.less";
+@import "priced-list.less";
 
 @import "./slides/index.less";
 @import "./slides/about.less";
+@import "./slides/menu.less";
