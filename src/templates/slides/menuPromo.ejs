@@ -1,24 +1,26 @@
 <div class="subslide subslide--promo">
-<div class="promo-list">
-	<% data.promo.forEach(item => { %>
-		<div class="promo-item">
-			<h3 class="promo-item__title"><%-item.title%></h3>
-			<div class="promo-item__description"><%-item.description%></div>
-			<% if (item.cost) { %>
-				<div class="cost-row">
-				<% item.cost.forEach(costItem => { %>
-					<div class="cost-item">
-						<div class="cost-item__title">
-							<%-costItem.price%><span class="ruble">₽</span>
-						</div>
-						<div class="cost-item__description">
-							<%-costItem.description%>
-						</div>
-					</div>
-					<% }) %>
-					</div>
-				<% } %>
+    <div class="subslide-content">
+		<div class="promo-list">
+			<% data.promo.forEach(item => { %>
+				<div class="promo-item">
+					<h3 class="promo-item__title"><%-item.title%></h3>
+					<div class="promo-item__description"><%-item.description%></div>
+					<% if (item.cost) { %>
+						<div class="cost-row">
+						<% item.cost.forEach(costItem => { %>
+							<div class="cost-item">
+								<div class="cost-item__title">
+									<%-costItem.price%><span class="ruble">₽</span>
+								</div>
+								<div class="cost-item__description">
+									<%-costItem.description%>
+								</div>
+							</div>
+							<% }) %>
+							</div>
+						<% } %>
+				</div>
+			<% }) %>
 		</div>
-	<% }) %>
-</div>
+	</div>
 </div>

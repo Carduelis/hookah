@@ -1,6 +1,57 @@
-[data-id="about"] {
+.slide[data-id="about"] {
+    background-image: url("../../../assets/slides/about-bg.jpg");
     .wrapper {
-        background-color: rgba(0, 0, 0, 0.7);
-        margin-bottom: @space;
+        // background-color: rgba(0, 0, 0, 0.7);
+        margin-left: @leftBarWidth;
+        margin-right: @space*2;
+        margin-top: 0;
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+    }
+}
+
+.about__content {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin-bottom: @space;
+    padding: @space*2;
+    padding-bottom: @space;
+    display: flex;
+    align-items: flex-end;
+}
+.about__scores {
+    flex-grow: 1;
+}
+
+.about__title {
+    flex-grow: 3;
+    margin-left: @space;
+    padding-bottom: @space;
+}
+
+.scores-list {
+    padding-left: 5em;
+    &__item {
+        position: relative;
+        margin-top: @space;
+    }
+    &__icon {
+        position: absolute;
+        right: 100%;
+        top: 0;
+        height: 5em;
+        margin-right: @pad;
+        background-color: #fff;
+        width: 5em;
+    }
+    &__score {
+        font-size: 5em;
+        line-height: 1em;
+        font-weight: bold;
+    }
+    &__score-title {
+        margin-top: @pad;
+        font-size: 1.2em;
     }
 }

@@ -32,6 +32,7 @@ export default {
         {
             id: 'about',
             title: 'О нас',
+            menuTitle: 'О нас',
             order: 20,
             description: `Каждый 6-й кальян. Мы знаем толк в кальянах и чае.<br>
                 Это наша страсть. И мы хотим поделиться<br>
@@ -46,6 +47,7 @@ export default {
             id: 'menuHookah',
             title: 'Кальяны',
             menuTitle: 'Меню',
+            parentId: 'menu',
             leftBar: true,
             order: 30
         },
@@ -53,6 +55,7 @@ export default {
             id: 'menuTea',
             title: 'Чай',
             menuTitle: null,
+            parentId: 'menu',
             leftBar: true,
             order: 31
         },
@@ -60,6 +63,7 @@ export default {
             id: 'menuBar',
             title: 'Бар',
             menuTitle: null,
+            parentId: 'menu',
             leftBar: true,
             order: 32
         },
@@ -67,6 +71,7 @@ export default {
             id: 'menuPromo',
             title: 'Акции',
             menuTitle: null,
+            parentId: 'menu',
             leftBar: true,
             order: 33
         },

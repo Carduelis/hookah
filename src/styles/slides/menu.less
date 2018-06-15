@@ -1,16 +1,15 @@
 [data-id^="menu"] {
     .wrapper {
         width: 100%;
-        margin-bottom: @space;
+        height: 100%;
     }
 }
 [data-id="menuHookah"] {
-    background-image: url("../../../assets/slides/menuHookah/bg.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    .wrapper {
-        background-color: rgba(0, 0, 0, 0.5);
+    .subslide {
+        background-image: url("../../../assets/slides/menuHookah-bg.jpg");
+        &::after {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
     }
     .group--tobacco {
         margin-left: @space;
@@ -53,7 +52,20 @@
     }
 }
 
+[data-id="menuTea"] {
+    .subslide {
+        background-image: url("../../../assets/slides/menuTea-bg.jpg");
+    }
+}
+[data-id="menuBar"] {
+    .subslide {
+        background-image: url("../../../assets/slides/menuBar-bg.jpg");
+    }
+}
 [data-id="menuPromo"] {
+    .subslide {
+        background-image: url("../../../assets/slides/menuPromo-bg.jpg");
+    }
     .promo-list {
         padding-left: @block;
         display: flex;

@@ -11,6 +11,12 @@
     transition-timing-function: cubic-bezier(0.77, 0.01, 0.24, 1);
 }
 
+.slide-title {
+    p {
+        width: 30em;
+    }
+}
+
 .slide {
     height: 100vh;
     display: flex;
@@ -18,10 +24,15 @@
     will-change: transform;
     background-image: radial-gradient(
             ellipse at top,
-            rgba(227, 242, 253, 0.2),
+            rgba(8, 129, 216, 0.2),
             transparent
         ),
         linear-gradient(25deg, #19150e, #3e2f2a);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     align-items: center;
     color: #fff;
     position: relative;
@@ -30,8 +41,29 @@
 
 .subslide {
     display: flex;
-    width: 100%;
-    padding-left: @block*2;
+    align-items: center;
+    margin-left: @leftBarWidth;
+    margin-right: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        right: 0;
+        left: 0;
+        display: block;
+    }
+    .subslide-content {
+        display: flex;
+        padding-left: @space*2;
+        position: relative;
+        z-index: 2;
+    }
     .bowls {
         flex-grow: 1;
     }

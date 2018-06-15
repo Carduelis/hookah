@@ -5,8 +5,10 @@
             <li>
                 <a 
                     href="#<%-slide.id%>" 
-                    data-state="<%-slide.id === 1 && 'active'%>" 
+                    data-parent-id="<%-slide.parentId%>"
+                    data-state="" 
                     data-order="<%-slide.order%>"
+                    class="menu-topbar__link"
                 >
                     <span><%-slide.menuTitle%></span>
                 </a>
