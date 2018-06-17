@@ -1,29 +1,57 @@
-@topBarHeight: @pad + @space*2;
 .menu-topbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 11;
     height: @topBarHeight;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: normal;
     &__logo {
-        &::before {
-            content: "logo";
+        background-image: url("../../assets/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        background-position: center;
+        height: 70%;
+        flex-shrink: 0;
+        width: @leftBarWidth;
+        @media (max-width: 768px) {
+            width: @block / 2;
+            margin-left: @space / 2;
+            margin-right: @pad;
+        }
+        @media (max-width: 768px) and (orientation: landscape) {
+            margin-left: @space;
         }
     }
     &__nav {
         display: flex;
         padding-right: @space;
+        @media (max-width: 768px) and (orientation: portrait) {
+            padding-right: @pad;
+            flex-shrink: 1;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
         li {
             list-style-type: none;
             a {
                 display: block;
                 padding: @pad @space;
+                @media (max-width: 768px) and (orientation: portrait) {
+                    flex-wrap: wrap;
+                    &[href="#index"] {
+                        display: none;
+                    }
+                }
+                @media (max-width: 768px) {
+                    padding: @pad / 2 @pad;
+                }
                 font-size: 1.4em;
+                white-space: nowrap;
                 span {
                     position: relative;
                     display: block;
@@ -40,11 +68,18 @@
                         transition: all 300ms;
                     }
                 }
-                &:hover,
                 &[data-state="active"] {
                     span::after {
                         transform: scaleX(1); // translateX(0%);
                         border-bottom-color: inherit;
+                    }
+                }
+                &:hover {
+                    @media screen and (min-width: 768px) {
+                        span::after {
+                            transform: scaleX(1); // translateX(0%);
+                            border-bottom-color: inherit;
+                        }
                     }
                 }
             }

@@ -1,5 +1,6 @@
 import topbar from './topbar.ejs';
 import leftbar from './leftbar.ejs';
+import reel from './reel.ejs';
 import main from './main.ejs';
 import slidesTemplates from './slides';
 import preloader from './preloader.ejs';
@@ -71,6 +72,7 @@ export default main({
     leftbar: leftbar({
         items: slides.filter(item => item.leftBar)
     }),
+    reel: reel(slides),
     slides: slides
         .map(slide => {
             console.log(slide.id, slide);

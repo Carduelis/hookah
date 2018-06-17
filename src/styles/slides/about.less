@@ -13,12 +13,27 @@
 
 .about__content {
     background-color: rgba(0, 0, 0, 0.7);
+    @media screen and (max-width: 768px) {
+        background-color: rgba(0, 0, 0, 0);
+    }
     width: 100%;
     margin-bottom: @space;
     padding: @space*2;
     padding-bottom: @space;
     display: flex;
     align-items: flex-end;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding-top: @topBarHeight;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-bottom: 0;
+    }
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        margin-left: 0;
+        padding-left: 0;
+    }
 }
 .about__scores {
     flex-grow: 1;
@@ -28,30 +43,58 @@
     flex-grow: 3;
     margin-left: @space;
     padding-bottom: @space;
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+        flex-grow: 0;
+        padding-bottom: 0;
+    }
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        margin-left: 0;
+        flex-grow: 0;
+        padding-right: @space;
+    }
 }
 
 .scores-list {
-    padding-left: 5em;
+    font-size: 5em;
+    padding-left: 1em;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-grow: 1;
+        font-size: 3.5em;
+    }
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        flex-wrap: wrap;
+    }
     &__item {
         position: relative;
         margin-top: @space;
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+            flex-grow: 1;
+            flex-basis: 50%;
+        }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+            margin-right: @space*2;
+        }
     }
     &__icon {
         position: absolute;
         right: 100%;
         top: 0;
-        height: 5em;
+        height: 1em;
         margin-right: @pad;
         background-color: #fff;
-        width: 5em;
+        width: 1em;
     }
     &__score {
-        font-size: 5em;
+        font-size: 1em;
         line-height: 1em;
         font-weight: bold;
     }
-    &__score-title {
+    &__title {
         margin-top: @pad;
-        font-size: 1.2em;
+        font-size: 1.2/5em;
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+            white-space: nowrap;
+        }
     }
 }

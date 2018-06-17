@@ -1,7 +1,7 @@
 export default [
     {
         src: 'fsdfs.svg',
-        title: 'Sony Playstation 4'
+        title: 'Sony Playstation&nbsp;4'
     },
     {
         src: 'dendi.svg',
@@ -9,7 +9,7 @@ export default [
     },
     {
         src: 'nastolki.svg',
-        title: 'Настольный игры'
+        title: 'Настольные игры'
     },
     {
         src: 'chessmates.svg',

@@ -43,26 +43,47 @@
     display: flex;
     align-items: center;
     margin-left: @leftBarWidth;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+    }
     margin-right: 0;
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    &::before,
     &::after {
         content: "";
         position: absolute;
         top: 0;
         bottom: 0;
-        z-index: 1;
         right: 0;
         left: 0;
         display: block;
     }
+    &::after {
+        z-index: 1;
+    }
+    &::before {
+        z-index: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: @leftBarWidth;
+        @media screen and (max-width: 768px) {
+            left: 0;
+        }
+    }
     .subslide-content {
         display: flex;
         padding-left: @space*2;
+        @media (max-width: 768px) {
+            padding-left: @space;
+        }
         position: relative;
         z-index: 2;
+        overflow-x: auto;
     }
     .bowls {
         flex-grow: 1;

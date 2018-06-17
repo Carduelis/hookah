@@ -1,5 +1,5 @@
 .slide[data-id="index"] {
-    background-image: url("../../../assets/slides/index/background.jpg");
+    background-image: url("../../../assets/slides/index-bg.jpg");
     .wrapper {
         .title {
             font-size: 10em;
@@ -8,6 +8,14 @@
             text-align: center;
             text-transform: uppercase;
             @letterSpacing: 0.01em;
+            @media screen and (max-width: 768px) and (orientation: portrait) {
+                font-size: 4.5em;
+            }
+            @media screen and (max-width: 768px) and (orientation: landscape) {
+                font-size: 6em;
+                margin-top: -@pad;
+                line-height: 1;
+            }
             &__type {
                 font-weight: 100;
                 @fix: 0.01em;
@@ -24,10 +32,37 @@
         bottom: @space;
         display: flex;
         position: absolute;
+        overflow-x: auto;
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+            position: static;
+            opacity: 0.8;
+            padding-top: @space;
+            flex-wrap: wrap;
+        }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+            // padding-left: 0;
+            left: 0;
+            bottom: @space*1.5;
+        }
     }
     .feature {
         flex-basis: 15em;
         font-size: 1.2em;
         margin-right: @space;
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+            flex-basis: 40%;
+            margin-right: @pad;
+            margin-top: @pad;
+        }
+        &__title {
+            @media screen and (max-width: 768px) and (orientation: portrait) {
+                margin: 0;
+            }
+        }
+        &__description {
+            @media screen and (max-width: 768px) and (orientation: portrait) {
+                font-size: 0.8em;
+            }
+        }
     }
 }

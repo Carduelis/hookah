@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-    name: 'Logger by Pavel',
-    short_name: 'Logger',
-    description: 'See logs!',
-    background_color: '#8767CF',
-    theme_color: '#5890E8',
+    name: 'Кальянная ShishaTime на Бауманской',
+    short_name: 'ShishaTime',
+    description: 'Кальянная ShishaTime на Бауманской',
+    background_color: '#1c060b',
+    theme_color: '#1c060b',
     icons: [
         {
             src: path.resolve('assets/icon.png'),

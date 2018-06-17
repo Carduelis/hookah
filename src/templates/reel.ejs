@@ -1,15 +1,16 @@
-<div class="reel">
-    <nav class="reel__nav">
-        <% data.slides.filter(slide => slide.menuTitle).forEach((slide, index) => { %>
-            <li>
+<div class="menu-reel">
+    <div class="reel">
+        <nav class="reel-content" id="reel">
+            <% data.filter(slide => slide.menuTitle).forEach((slide, index) => { %>
                 <a 
                     href="#<%-slide.id%>" 
+                        class="reel-link"
                     data-state="<%-slide.id === 1 && 'active'%>" 
                     data-order="<%-slide.order%>"
                 >
-                    <span>0<%-index%></span>
+                    <span>0<%-index+1%></span>
                 </a>
-            </li>
-        <% }) %>
-    </nav>
+            <% }) %>
+        </nav>
+    </div>
 </div>

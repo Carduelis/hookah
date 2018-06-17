@@ -1,7 +1,82 @@
 .slide[data-id="entertainment"] {
     background-image: url("../../../assets/slides/entertainment-bg.jpg");
     .wrapper {
-        background-color: rgba(0, 0, 0, 0.7);
-        margin-bottom: @space;
+        margin-left: @leftBarWidth;
+        margin-right: @space*2;
+        margin-top: 0;
+        flex-grow: 1;
+        height: 100%;
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+            margin: 0;
+        }
+        display: flex;
+    }
+}
+
+.entertainment__content {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin-bottom: @space;
+    padding: @space*2;
+    padding-bottom: @space;
+    display: flex;
+    align-items: flex-end;
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 0;
+        margin: 0;
+        padding-top: @topBarHeight;
+        justify-content: flex-start;
+        align-items: flex-start;
+        // display: none;
+    }
+}
+.entertainment__scores {
+    flex-grow: 1;
+    flex-basis: 18em;
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        flex-grow: 50%;
+        flex-grow: 2;
+    }
+}
+
+.entertainment__title {
+    flex-grow: 3;
+    margin-left: @space;
+    padding-bottom: @space;
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        padding-bottom: 0;
+        flex-grow: 1;
+    }
+}
+
+.entertainment-list {
+    font-size: 5em;
+    padding-left: 1em;
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+        font-size: 4em;
+    }
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        padding-left: 0;
+        padding-bottom: @space;
+        margin-left: @space;
+        font-size: 4em;
+    }
+    &__item {
+        position: relative;
+        margin-top: 0.5em;
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        height: 1em;
+        background-color: #fff;
+        width: 1em;
+        flex-shrink: 0;
+        margin-right: @pad;
+    }
+    &__title {
+        font-size: 0.35em;
     }
 }

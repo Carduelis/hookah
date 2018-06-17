@@ -5,10 +5,16 @@
     }
 }
 [data-id="menuHookah"] {
+    @size: 10em;
     .subslide {
         background-image: url("../../../assets/slides/menuHookah-bg.jpg");
         &::after {
             background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+    .subslide-content {
+        @media screen and (max-width: 768px) {
+            height: 100%;
         }
     }
     .group--tobacco {
@@ -17,15 +23,28 @@
     .tobacco-list {
         display: flex;
         flex-wrap: wrap;
+
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+            flex-wrap: nowrap;
+        }
+
+        @media screen and (max-width: 768px) {
+            min-width: (@size+ @space) * 3;
+        }
+    }
+    .tobacco-title {
+        white-space: nowrap;
     }
     .tobacco-item {
         margin-right: @space;
         margin-bottom: @space;
+        @media screen and (max-width: 768px) {
+            margin-bottom: @pad;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
         &__icon {
-            @size: 10rem;
             width: @size;
             height: @size;
             background-color: #000;
@@ -44,6 +63,10 @@
     }
     .bowl-replacement {
         margin-top: -@space / 2;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 0;
+        }
         font-size: 1.4em;
         font-weight: 200;
         &__item {
@@ -55,25 +78,83 @@
 [data-id="menuTea"] {
     .subslide {
         background-image: url("../../../assets/slides/menuTea-bg.jpg");
+
+        &::after {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+        .group {
+            display: flex;
+            align-items: flex-start;
+            h3 {
+                margin-top: 0;
+                margin-right: @space;
+            }
+        }
     }
 }
 [data-id="menuBar"] {
     .subslide {
         background-image: url("../../../assets/slides/menuBar-bg.jpg");
+
+        &::after {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        &::before {
+            background-image: url("../../../assets/slides/menuBar-smoke.png");
+        }
+    }
+
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+        .group {
+            display: flex;
+            align-items: flex-start;
+            h3 {
+                margin-top: 0;
+                margin-right: @space;
+            }
+        }
     }
 }
 [data-id="menuPromo"] {
     .subslide {
         background-image: url("../../../assets/slides/menuPromo-bg.jpg");
+        &::after {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        &::before {
+            background-image: url("../../../assets/slides/menuPromo-smoke.png");
+            left: 0;
+            // background-position-x: -@leftBarWidth;
+        }
     }
     .promo-list {
         padding-left: @block;
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: 768px) {
+            padding-left: 0;
+        }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
     }
     .promo-item {
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+            // flex-basis: 40%;
+            flex-grow: 1;
+        }
         &__title {
             margin-bottom: 0;
+            margin-top: 1.4em;
+
+            @media screen and (max-width: 768px) {
+                margin-top: 1em;
+                font-size: 3em;
+            }
         }
         &__description {
             font-weight: 200;
@@ -88,6 +169,9 @@
         margin-right: @space;
         &__title {
             font-size: 5em;
+            @media screen and (max-width: 768px) {
+                font-size: 4em;
+            }
             .ruble {
                 font-size: 0.5em;
             }

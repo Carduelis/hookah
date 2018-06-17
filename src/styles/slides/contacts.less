@@ -1,7 +1,75 @@
 .slide[data-id="contacts"] {
-    background-image: url("../../../assets/slides/contacts-bg.jpg");
+    // background-image: url("../../../assets/slides/contacts-bg.jpg");
     .wrapper {
-        background-color: rgba(0, 0, 0, 0.7);
-        margin-bottom: @space;
+        // margin-bottom: @space;
+
+        height: 100%;
+        display: flex;
+        align-items: stretch;
+        flex-grow: 1;
+        margin-left: @leftBarWidth;
+        margin-right: @space;
+        @media (max-width: 768px) and (orientation: portrait) {
+            margin: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) and (orientation: landscape) {
+            margin: 0;
+            width: 100%;
+        }
+    }
+    .contacts-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        align-items: stretch;
+        width: 100%;
+        padding-left: @space;
+        padding-top: @topBarHeight;
+        @media (max-width: 768px) and (orientation: portrait) {
+            justify-content: flex-end;
+            padding-left: 0;
+            flex-direction: column;
+        }
+    }
+    .slide-title {
+        flex-grow: 1;
+        @media (max-width: 768px) and (orientation: portrait) {
+            padding-left: @space;
+            padding-bottom: @pad;
+        }
+        @media (max-width: 768px) {
+            h2 {
+                display: none;
+            }
+        }
+    }
+    #mapContainer {
+        flex-grow: 7;
+        @media (max-width: 768px) and (orientation: portrait) {
+            flex-grow: 2;
+            height: 100%;
+            // transform: translateY(-60px);
+        }
+    }
+    #map {
+        height: 100%; /* The height is 400 pixels */
+        width: 100%;
+        // width: 400px; /* The width is the width of the web page */
+    }
+
+    .contacts-phone {
+        font-size: 3em;
+        span {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+    }
+    .contacts-address {
+        font-size: 2em;
+        line-height: 2;
+        span {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
     }
 }
