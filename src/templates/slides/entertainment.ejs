@@ -7,8 +7,7 @@
         <div class="entertainment-list">
             <% data.entertainment.forEach(item => { %>
                 <div class="entertainment-list__item">
-                    <div class="entertainment-list__icon">
-                        <img src="<%-item.src%>">
+                    <div class="entertainment-list__icon entertainment-list__icon--<%-item.id%>">    
                     </div>
                     <div class="entertainment-list__title">
                         <%=item.title%>

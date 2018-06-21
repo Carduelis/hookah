@@ -1,0 +1,19 @@
+.backgroundUrl(@url, @filename, @extention) {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../assets/@{url}/@{filename}.@{extention}");
+}
+
+.slideBackgroundUrl(@name, @extention: "jpg") {
+    background-size: cover;
+    .backgroundUrl("slides", @name, @extention);
+}
+
+.tobaccoBackgroundUrl(@name, @extention: "png") {
+    .backgroundUrl("hookah-brands", @name, @extention);
+}
+
+.iconBackgroundUrl(@name, @extention: "svg") {
+    background-size: contain;
+    .backgroundUrl("icons", @name, @extention);
+}

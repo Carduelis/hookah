@@ -9,8 +9,7 @@
 			<div class="tobacco-list">
 			<% data.tobacco.forEach(item => { %>
 				<div class="tobacco-item">
-					<div class="tobacco-item__icon">
-						<img src="<%-item.src%>" alt="<%-item.title%>">
+					<div class="tobacco-item__icon tobacco-item__icon--<%-item.id%>">
 					</div>
 					<span class="tobacco-item__price"><%-item.price%><span class="ruble">₽</span></span>
 				</div>

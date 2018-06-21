@@ -61,6 +61,11 @@ module.exports = {
         //   name: 'common' // Specify the common bundle's name.
         //  })
     ],
+    resolve: {
+        alias: {
+            assets: path.resolve('./assets')
+        }
+    },
     output: {
         filename: '[name].bundle.js',
         // chunkFilename: '[name].chunk.bundle.js',

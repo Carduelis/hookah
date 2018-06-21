@@ -1,21 +1,21 @@
 export default [
     {
-        icon: 'fgdfg.png',
+        id: 'bottle',
         score: 99,
         title: 'Вкусов табака'
     },
     {
-        icon: 'fgdfg.png',
+        id: 'tea',
         score: 85,
         title: 'Сортов чая'
     },
     {
-        icon: 'fgdfg.png',
+        id: 'hookah',
         score: 120,
         title: 'Идей для кальяна'
     },
     {
-        icon: 'fgdfg.png',
+        id: 'book',
         score: 250,
         title: 'книг'
     }

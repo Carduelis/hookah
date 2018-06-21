@@ -1,32 +1,32 @@
 export default [
     {
         title: 'Al Fakher',
-        src: 'asdasd.png',
+        id: 'al_fakher',
         price: 900
     },
     {
         title: 'Adaya',
-        src: 'asdasd.png',
+        id: 'adaya',
         price: 1000
     },
     {
         title: 'Starbuzz',
-        src: 'asdasd.png',
+        id: 'starbuzz',
         price: 1100
     },
     {
         title: 'Darkside',
-        src: 'asdasd.png',
+        id: 'darkside',
         price: 1100
     },
     {
         title: 'Tangiers',
-        src: 'asdasd.png',
+        id: 'tangiers',
         price: 1100
     },
     {
         title: 'World Original',
-        src: 'asdasd.png',
+        id: 'world_original',
         price: 1100
     }
 ];

@@ -1,18 +1,18 @@
 export default [
     {
-        src: 'fsdfs.svg',
+        id: 'gamepad',
         title: 'Sony Playstation&nbsp;4'
     },
     {
-        src: 'dendi.svg',
+        id: 'gamepad-sega',
         title: 'Ретро-игры'
     },
     {
-        src: 'nastolki.svg',
+        id: 'dominoes',
         title: 'Настольные игры'
     },
     {
-        src: 'chessmates.svg',
+        id: 'chess',
         title: 'Шашки&nbsp;и \nшахматы'
     }
 ];

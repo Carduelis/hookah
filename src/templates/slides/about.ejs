@@ -6,8 +6,7 @@
         <div class="scores-list">
             <% data.highlightes.forEach(item => { %>
                 <div class="scores-list__item">
-                    <div class="scores-list__icon">
-                        <img src="<%-item.src%>">
+                    <div class="scores-list__icon scores-list__icon--<%-item.id%>">
                     </div>
                     <div class="scores-list__score">
                         <%-item.score%>
