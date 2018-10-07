@@ -1,54 +1,46 @@
 export default [
     {
-        title: 'Молочный улун',
-        price: 500
+        title: 'Те Гуань Инь (свежий)',
+        price: 350
     },
     {
-        title: 'Сенча',
-        price: 500
+        title: 'Пропаренный улун',
+        price: 350
     },
     {
-        title: 'Ройбуш',
-        price: 500
+        title: 'Жасминовый чай',
+        price: 350
     },
     {
-        title: 'Улун',
-        price: 700
+        title: 'Узбекский чай с&nbsp;чабрецом',
+        price: 350
+    },
+    {
+        title: 'Чай с&nbsp;бергамотом',
+        price: 350
     },
     {
         title: 'Фруктовый чай',
-        price: 700
+        price: 350
     },
     {
-        title: 'Черный',
-        price: 600
+        title: 'Да Хун Пао',
+        price: 400
     },
     {
-        title: 'Черный байховый',
-        price: 800
+        title: 'Белый пуэр',
+        price: 400
     },
     {
-        title: 'Белый чай',
-        price: 800
+        title: 'Зеленый пуэр',
+        price: 400
     },
     {
-        title: 'Красный чай',
-        price: 800
+        title: 'Черный пуэр',
+        price: 400
     },
     {
-        title: 'Желтый чай',
-        price: 800
-    },
-    {
-        title: 'Зеленый чай с жасмином',
-        price: 800
-    },
-    {
-        title: 'Чай с облепихой',
-        price: 800
-    },
-    {
-        title: 'Чай с вареньем',
-        price: 800
+        title: 'Молочный улун',
+        price: 400
     }
 ];

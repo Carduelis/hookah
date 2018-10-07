@@ -9,14 +9,19 @@ export default [
         id: 'adaya',
         price: 1000
     },
-    {
-        title: 'Starbuzz',
-        id: 'starbuzz',
-        price: 1100
-    },
+    // {
+    //     title: 'Starbuzz',
+    //     id: 'starbuzz',
+    //     price: 1100
+    // },
     {
         title: 'Darkside',
         id: 'darkside',
+        price: 1100
+    },
+    {
+        title: 'Fumari',
+        id: 'fumari',
         price: 1100
     },
     {

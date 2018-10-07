@@ -2,8 +2,9 @@
     <div class="priced-list">
     <% data.forEach(item => { %>
         <div class="item">
-            <span class="item__title"><%-item.title%></span>
-            <span class="item__description"><%-item.price%><span class="ruble">₽</span></span>
+            <span class="item__title"><%=item.title%></span>
+            <span class="item__volume"><%=item.volume%></span>
+            <span class="item__description"><%=item.price%><span class="ruble">₽</span></span>
         </div>
     <% }) %>
     </div>

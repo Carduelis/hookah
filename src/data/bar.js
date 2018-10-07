@@ -1,54 +1,47 @@
 export default [
     {
-        title: 'Молочный улун',
-        price: 500
+        title: 'Corona Extra',
+        volume: '0.355л',
+        price: 200
     },
     {
-        title: 'Сенча',
-        price: 500
+        title: 'Blanche MaCherie',
+        volume: '0.5л',
+        price: 250
     },
     {
-        title: 'Ройбуш',
-        price: 500
+        title: 'Cherie Cherry',
+        volume: '0.5л',
+        price: 250
     },
     {
-        title: 'Улун',
-        price: 700
+        title: 'Run, Forest',
+        volume: '0.5л',
+        price: 250
     },
     {
-        title: 'Фруктовый чай',
-        price: 700
+        title: 'Spaten',
+        volume: '0.5л',
+        price: 250
     },
     {
-        title: 'Черный',
+        title: 'White moon',
+        volume: '0.5л',
         price: 600
     },
     {
-        title: 'Черный байховый',
-        price: 800
+        title: 'Singing Birds',
+        volume: '0.5л',
+        price: 600
     },
     {
-        title: 'Белый чай',
-        price: 800
+        title: 'Krusovice',
+        volume: '0.5л',
+        price: 600
     },
     {
-        title: 'Красный чай',
-        price: 800
-    },
-    {
-        title: 'Желтый чай',
-        price: 800
-    },
-    {
-        title: 'Зеленый чай с жасмином',
-        price: 800
-    },
-    {
-        title: 'Чай с облепихой',
-        price: 800
-    },
-    {
-        title: 'Чай с вареньем',
-        price: 800
+        title: 'Сидр яблочный',
+        volume: '0.75л',
+        price: 600
     }
 ];

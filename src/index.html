@@ -4,6 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<title>
 		<%-htmlWebpackPlugin.options.title%>
 	</title>
@@ -31,8 +33,20 @@
 		};
 	</script>
 	<style>
+		html {
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			right: 0;
+			overflow: hidden;
+			-webkit-overflow-scrolling: touch;
+		}
+
 		body {
 			height: 100vh;
+			overflow: hidden;
 			background-image: radial-gradient( ellipse at top,
 			rgba(8, 129, 216, 0.2),
 			transparent),

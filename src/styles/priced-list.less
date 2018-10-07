@@ -13,11 +13,22 @@
     .item {
         display: flex;
         font-size: 1.4em;
-        margin: 0.5em 0;
+        margin: 0.7em 0;
+        line-height: 1.25em;
         justify-content: space-between;
         &__title {
         }
         &__description {
+            margin-left: 0;
+        }
+        &__volume {
+            margin-right: 0;
+            padding: 0 0.4em;
+            margin-left: auto;
+            opacity: 0.5;
+            align-self: baseline;
+            transform: scale(0.75);
+            transform-origin: right 80%;
         }
     }
 }

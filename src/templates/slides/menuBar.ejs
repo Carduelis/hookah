@@ -5,7 +5,9 @@
             <div class="priced-list__row">
                 <%=data.pricedListBar1%>
                 <%=data.pricedListBar2%>
-                <%=data.pricedListBar3%>
+                <% if (data.pricedListBar3.includes('item__title')) {%>
+                    <%=data.pricedListBar3%>
+                <% } %>
             </div>
         </div>
     </div>

@@ -5,7 +5,10 @@
             <div class="priced-list__row">
                 <%=data.pricedListTea1%>
                 <%=data.pricedListTea2%>
-                <%=data.pricedListTea3%>
+                
+                <% if (data.pricedListTea3.includes('item__title')) {%>
+                    <%=data.pricedListTea3%>
+                <% } %>
             </div>
         </div>
     </div>
